@@ -7,6 +7,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200&family=Pattaya&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Mukta:wght@200&family=Pattaya&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
 
 * {
@@ -17,13 +18,13 @@
 }
 
 body {
-    background-color: rgb(12, 12, 12);
-    color: white;
+    background-color: #fffbf5;
     /* position:absolute; */
     /* font-family: 'Cutive Mono', monospace; */
-    font-family: 'Roboto', sans-serif;
+    font-family: "Inter", sans-serif;
     overflow-x: hidden;
 }
+
 img {
     width: 100%;
     height: 100%;
@@ -38,7 +39,6 @@ body {
 /* ......................................... */
 #particles-js canvas {
     display: block;
-    vertical-align: bottom;
     -webkit-transform: scale(1);
     -ms-transform: scale(1);
     transform: scale(1);
@@ -69,33 +69,39 @@ a {
 }
 
 .top-nav {
-    min-height: 40vh;
+    min-height: 100vh;
     width: 100%;
-    background: rgb(46, 31, 36);
-    background: url(./assets/vertical_cloth.png);
+    /* background: rgb(46, 31, 36); */
+    /* background: url(./assets/vertical_cloth.png); */
     /* position: fixed; */
 }
 
-.navbar-brand>img {
+.navbar-brand > img {
     max-width: 70px;
     position: relative;
 }
 
 a.nav-link {
-    color: rgba(240, 242, 240, 0.9) !important;
+    color: black !important;
     letter-spacing: 2.5px;
     font-family: 'Roboto', sans-serif;
-    font-weight: 500;
     text-decoration: none;
-    width: 125px;
-    padding: 7px !important;
+    padding: 10px;
+    margin: 0 2px;
+    font-weight: bold;
     display: block;
     position: relative;
+    font-size: 20px;
+    min-width: 100px;
+}
+
+a.nav-link:hover {
+    color: white!important;
 }
 
 a.nav-link::after {
     content: "";
-    background: white;
+    background: black;
     mix-blend-mode: exclusion;
     width: 100%;
     height: 0;
@@ -107,6 +113,7 @@ a.nav-link::after {
 
 a:hover::after {
     height: calc(100% + 4px);
+    font-weight: bold;
 }
 
 .hero-wrapper {
@@ -115,7 +122,6 @@ a:hover::after {
 }
 
 .hero .row {
-    background-color: rgba(245, 242, 240, 20);
     min-height: 55vh;
 }
 
@@ -159,6 +165,10 @@ a:hover::after {
     font-size: 1.3rem;
 }
 
+.display-1 {
+    font-weight: bold !important;
+}
+
 #title {
     min-height: 8rem;
 }
@@ -192,13 +202,14 @@ a:hover::after {
 }
 
 .bgColorFill {
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     padding: 1rem 0 !important;
-    border: 2px solid black;
+    border: 2px solid inherit;
     background: linear-gradient(to right, rgb(167, 40, 9) 50%, rgb(5, 5, 5) 50%);
     background-size: 200% 100%;
     background-position: top right;
     transition: all .4s ease-out;
+    border-radius: 1.25rem;
 }
 
 .bgColorFill:hover {
@@ -282,7 +293,7 @@ a:hover::after {
 }
 
 .aboutMeSection {
-    background: url(./assets/vertical_cloth.png);
+    /* background: url(./assets/vertical_cloth.png); */
     box-shadow: 12px -12px rgb(182, 30, 33);
     justify-content: center;
     text-align: center;
@@ -293,11 +304,11 @@ a:hover::after {
 
 .aboutMeSection .sec-title h4 {
     font-size: 4rem;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     font-style: bolder;
     letter-spacing: 1px;
     padding: 2rem auto;
-    font-family: 'Fredericka the Great', cursive;
+    /* font-family: 'Fredericka the Great', cursive; */
     width: 30%;
     min-width: 250px;
     line-height: 110px;
@@ -306,16 +317,16 @@ a:hover::after {
 
 #aboutmeContent {
     padding: 1rem 3rem;
-    font-family: 'Cutive Mono', monospace;
+    /* font-family: 'Cutive Mono', monospace; */
     font-weight: 300;
-    font-size: 1.2rem;
+    font-size: calc(1rem + 0.5vw);
     line-height: 2;
     min-height: 50vh;
 }
 
 #aboutmeContent span {
     /* font-style: italic; */
-    font-size: 1.5rem;
+    /* font-size: 1.5rem; */
     /* color: red; */
 
     font-family: 'Great Vibes', cursive;
@@ -349,8 +360,7 @@ a:hover::after {
     padding: 2rem 1rem;
     padding-top: 2.5rem !important;
     padding-bottom: 1rem;
-    color: rgba(251, 242, 240, 255);
-
+    color: #212529
 }
 
 .footer p {
@@ -394,7 +404,7 @@ footer p:hover {
 
 
 .bgColorFillToTop {
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     padding: 1rem 0 !important;
     border: 2px solid black;
     background: linear-gradient(to bottom, rgb(182, 30, 33) 50%, rgb(10, 10, 10) 50%);
@@ -411,9 +421,8 @@ footer p:hover {
 
 .right-title {
     letter-spacing: 1px;
-    text-transform: uppercase;
     color: #2F80ED;
-    margin-bottom: 1.2rem;
+    margin-bottom: 1rem;
     position: relative;
 }
 
@@ -430,9 +439,11 @@ footer p:hover {
 }
 
 .para {
-    line-height: 1.6rem;
-    color: white;
-    font-size: 1.1rem;
+    line-height: 1.2rem;
+    letter-spacing: 1px !important;
+    color: #5c6b6f;
+    font-size: 1rem !important;
+    font-weight: bolder !important;
 }
 
 .sect {
@@ -445,38 +456,51 @@ footer p:hover {
     text-align: start;
 }
 
+.left-tl-content {
+    margin: 0 10px 10px 0px 
+}
+
 .tl-title {
-    letter-spacing: 1px;
-    font-size: 1.3rem;
-    color: #fc7c05;
-    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    font-size: calc(1rem + 0.5vw);
+    color: #0d2f3f;
     font-weight: bold;
 }
 
+
 .tl-title-2 {
     letter-spacing: 1px;
-    font-size: 1.3rem;
-    color: #2D9CDB;
-    text-transform: uppercase;
+    font-size: calc(1rem + 0.5vw);
+    color: #0d2f3f;
     font-weight: bold;
 }
 
 .tl-content {
     border-left: 1px solid #ccc;
-    padding-left: 2rem;
     position: relative;
-    padding-bottom: 2rem;
+    padding-left: calc(0.2rem + 2vw);
+    padding-bottom: calc(1.5rem + 2vw);
 }
 
 .tl-title-2::before {
     content: "";
     position: absolute;
-    width: .7rem;
-    height: .7rem;
+    width: calc(0.5rem + 0.2vw);
+    height: calc(0.5rem + 0.2vw);
     background-color: #2D9CDB;
     border-radius: 50%;
     transform: translateX(-50%);
     left: 0;
+}
+
+.profile {
+    max-width: 350px;
+    max-height: 350px;
+    border-radius: 15px;
+}
+
+.profile-img {
+    border-radius: 16px;
 }
 
 @media screen and (max-width:823px) {
@@ -490,7 +514,6 @@ footer p:hover {
         width: 30%;
     }
 }
-
 
 
 /* Media Query  */
@@ -542,7 +565,7 @@ footer p:hover {
     }
 
     .aboutMeSection p {
-        font-size: 1rem;
+        /* font-size: 1rem; */
     }
 
 
